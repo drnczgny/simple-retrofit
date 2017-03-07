@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> data = new HashMap<>();
         data.put("y", year + "");
 
-        Call<String> call = omdbApiService.findMovieByTitle(data);
+        Call<String> call = omdbApiService.findMovieByYear(data);
 
         Log.i(TAG, call.request().url().toString());
 
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> data = new HashMap<>();
         data.put("i", imdbId);
 
-        Call<String> call = omdbApiService.findMovieByTitle(data);
+        Call<String> call = omdbApiService.findMovieByImdbId(data);
 
         Log.i(TAG, call.request().url().toString());
 

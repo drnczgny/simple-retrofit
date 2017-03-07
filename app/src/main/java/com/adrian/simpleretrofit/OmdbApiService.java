@@ -1,8 +1,5 @@
 package com.adrian.simpleretrofit;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import java.io.IOException;
 import java.util.Map;
 
@@ -33,8 +30,6 @@ public interface OmdbApiService {
 
     @GET("/")
     Call<String> findMovieByImdbId(@QueryMap Map<String, String> options);
-
-    Gson gson = new GsonBuilder().setLenient().create();
 
     OkHttpClient client = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
         @Override
